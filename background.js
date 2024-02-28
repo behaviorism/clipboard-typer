@@ -27,7 +27,7 @@ chrome.contextMenus.onClicked.addListener(({ menuItemId }, tab) => {
 
 // Track current task for each tab to prevent running multiple
 // tasks on the same tab. New tasks will end previous ones.
-const tasks = {};
+let tasks = {};
 
 const startTyping = async (tabId) => {
   const taskId = Math.random();
@@ -41,8 +41,7 @@ const startTyping = async (tabId) => {
   let i = 0;
 
   while (tasks[tabId] === taskId && i < text.length) {
-    let key = text[i];
-    await typeCharacter(tabId, key);
+    await typeCharacter(tabId, text[i]);
     // Random delay from 50ms to 200ms
     // Source: https://sa.rochester.edu/jur/issues/fall2005/ordal.pdf
     await wait(randomNumber(50, 200));
