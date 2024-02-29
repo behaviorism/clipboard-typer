@@ -57,9 +57,7 @@ const stopTyping = (tabId) => {
 };
 
 const typeCharacter = async (tabId, character) => {
-  await chrome.debugger.sendCommand({ tabId }, "Input.insertText", {
-    text: character,
-  });
+  await chrome.debugger.sendCommand({ tabId }, "Input.insertText", { text: character });
 
   /* 
      As there isn't a reliable way of sending certain characters like \n without
