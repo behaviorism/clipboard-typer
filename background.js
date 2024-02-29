@@ -47,6 +47,9 @@ const startTyping = async (tabId) => {
     await wait(randomNumber(50, 200));
     i++;
   }
+
+  // cleanup
+  stopTyping(tabId);
 };
 
 const stopTyping = (tabId) => {
