@@ -14,7 +14,7 @@ Clipboard Typer is a chrome extension that allows users to emulate typing text d
 ## Permissions
 
 - **debugger**: the extension uses the debugger api to emulatyping, as other methods do not work on some sites (i.e.: google docs)
-- **scripting** and **activeTab**: the extension uses scripting to inject a short script that reads the clipboard from the currently active tab, as there's no other way afaik of read the clipboard from a service worker
+- **scripting** and **activeTab**: the extension uses scripting to inject a short script that reads the clipboard from the currently active tab, as there's no other way afaik of reading the clipboard from a service worker
 
 ## Usage
 
